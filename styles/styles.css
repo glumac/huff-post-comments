@@ -3,11 +3,31 @@ body {
 	text-align:center;
 	}
 	
-#wrapper {
-	width:500px;
+
+.margin_top_10 {
+	margin-left: 120px;
+	margin-top: -50px;
+}
+
+#blog_content {
+	width:700px;
 	margin:0px auto;
-	text-align:left;
+	/*text-align:left;*/
 	padding:15px;
 	border:1px dashed #333;
 	background-color:#eee;
 	}
+
+#entry_body {
+	text-align:left;
+}
+
+.commentBox {
+	border:1px dashed #333;
+	height: 400px;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
