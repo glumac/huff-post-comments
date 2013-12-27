@@ -1,0 +1,1454 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (31.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateComments (20131227215009)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "score" integer, "clip" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20131227215009')[0m
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 16:53:24 -0500
+
+ActionController::RoutingError (No route matches [GET] "/"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (8.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:18:54 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (19.3ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (26.3ms)
+Compiled comments.css  (91ms)  (pid 24242)
+Compiled application.css  (106ms)  (pid 24242)
+Compiled jquery.js  (2ms)  (pid 24242)
+Compiled jquery_ujs.js  (0ms)  (pid 24242)
+Compiled ACAAFilter.js  (0ms)  (pid 24242)
+Compiled ACFFT.js  (0ms)  (pid 24242)
+Compiled ACFIRFilter.js  (0ms)  (pid 24242)
+Compiled ACSpectrum.js  (0ms)  (pid 24242)
+Compiled AudioSequenceEditor.js  (0ms)  (pid 24242)
+Compiled SpectrumDisplay.js  (0ms)  (pid 24242)
+Compiled SpectrumWorker.js  (0ms)  (pid 24242)
+Compiled audioLayerControl.js  (0ms)  (pid 24242)
+Compiled audioplayback.js  (0ms)  (pid 24242)
+Compiled audiosequence.js  (0ms)  (pid 24242)
+Compiled binarytoolkit.js  (0ms)  (pid 24242)
+Compiled comments.js  (1294ms)  (pid 24242)
+Compiled editorapp.js  (0ms)  (pid 24242)
+Compiled fft.js  (0ms)  (pid 24242)
+Compiled filedropbox.js  (0ms)  (pid 24242)
+Compiled filesystemutility.js  (0ms)  (pid 24242)
+Compiled mathutilities.js  (0ms)  (pid 24242)
+Compiled wavetrack.js  (0ms)  (pid 24242)
+Compiled application.js  (1932ms)  (pid 24242)
+Completed 200 OK in 2411ms (Views: 2303.3ms | ActiveRecord: 44.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /application.css - 200 OK (20ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /comments.css - 200 OK (6ms)
+
+
+Started GET "/assets/ACFIRFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /ACFIRFilter.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /jquery.js - 200 OK (3ms)
+
+
+Started GET "/assets/ACAAFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /ACAAFilter.js - 200 OK (2ms)
+
+
+Started GET "/assets/ACFFT.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /ACFFT.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /jquery_ujs.js - 200 OK (34ms)
+
+
+Started GET "/assets/ACSpectrum.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /ACSpectrum.js - 200 OK (2ms)
+
+
+Started GET "/assets/AudioSequenceEditor.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /AudioSequenceEditor.js - 200 OK (2ms)
+
+
+Started GET "/assets/audioLayerControl.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /audioLayerControl.js - 200 OK (1ms)
+
+
+Started GET "/assets/SpectrumWorker.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /SpectrumWorker.js - 200 OK (1ms)
+
+
+Started GET "/assets/SpectrumDisplay.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /SpectrumDisplay.js - 200 OK (2ms)
+
+
+Started GET "/assets/audioplayback.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /audioplayback.js - 200 OK (1ms)
+
+
+Started GET "/assets/audiosequence.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /audiosequence.js - 200 OK (1ms)
+
+
+Started GET "/assets/binarytoolkit.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /binarytoolkit.js - 200 OK (1ms)
+
+
+Started GET "/assets/editorapp.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /editorapp.js - 200 OK (1ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:57 -0500
+Served asset /comments.js - 200 OK (1ms)
+
+
+Started GET "/styles.css" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/styles.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/filedropbox.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+Served asset /filedropbox.js - 200 OK (1ms)
+
+
+Started GET "/bootstrap/css/bootstrap-responsive.css" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/css/bootstrap-responsive.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/bootstrap/css/bootstrap.css" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/css/bootstrap.css"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/assets/fft.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+Served asset /fft.js - 200 OK (1ms)
+
+
+Started GET "/original_page_files_files/css(1).php" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/css(1).php"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/original_page_files_files/css(2).php" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/css(2).php"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/original_page_files_files/css(3).php" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/css(3).php"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/original_page_files_files/css(4).php" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/css(4).php"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/assets/filesystemutility.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+Served asset /filesystemutility.js - 200 OK (2ms)
+
+
+Started GET "/assets/wavetrack.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+Served asset /wavetrack.js - 200 OK (1ms)
+
+
+Started GET "/assets/mathutilities.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+Served asset /mathutilities.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+Served asset /application.js - 200 OK (21ms)
+
+
+Started GET "/original_page_files_files/image_1368631358.jpeg" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/image_1368631358.jpeg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/original_page_files_files/headshot.jpg" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/headshot.jpg"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/original_page_files_files/css.php" for 127.0.0.1 at 2013-12-27 17:18:58 -0500
+
+ActionController::RoutingError (No route matches [GET] "/original_page_files_files/css.php"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (23.1ms)[0m  SELECT "comments".* FROM "comments" 
+  Rendered comments/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 121ms (Views: 96.8ms | ActiveRecord: 23.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACFIRFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /ACFIRFilter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACSpectrum.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /ACSpectrum.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AudioSequenceEditor.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /AudioSequenceEditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACFFT.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /ACFFT.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACAAFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /ACAAFilter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audioLayerControl.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /audioLayerControl.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SpectrumDisplay.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /SpectrumDisplay.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SpectrumWorker.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /SpectrumWorker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audioplayback.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:11 -0500
+Served asset /audioplayback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audiosequence.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /audiosequence.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/editorapp.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /editorapp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/binarytoolkit.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /binarytoolkit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fft.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /fft.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/filedropbox.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /filedropbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/filesystemutility.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /filesystemutility.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mathutilities.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /mathutilities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wavetrack.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /wavetrack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:22:12 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (24.1ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 118ms (Views: 93.1ms | ActiveRecord: 24.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACAAFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /ACAAFilter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACFFT.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /ACFFT.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACFIRFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /ACFIRFilter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACSpectrum.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /ACSpectrum.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AudioSequenceEditor.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /AudioSequenceEditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SpectrumDisplay.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /SpectrumDisplay.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SpectrumWorker.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /SpectrumWorker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audioplayback.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /audioplayback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audioLayerControl.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /audioLayerControl.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/binarytoolkit.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /binarytoolkit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audiosequence.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /audiosequence.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/editorapp.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /editorapp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fft.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /fft.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/filedropbox.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:03 -0500
+Served asset /filedropbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/filesystemutility.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+Served asset /filesystemutility.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mathutilities.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+Served asset /mathutilities.js - 304 Not Modified (0ms)
+
+
+Started GET "/jquery/js/jquery-1.7.2.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/jquery/js/jquery-1.7.2.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/assets/wavetrack.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+Served asset /wavetrack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/bootstrap/js/bootstrap-transition.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-transition.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/bootstrap/js/bootstrap-modal.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-modal.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/bootstrap/js/bootstrap-alert.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-alert.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/bootstrap/js/bootstrap-tooltip.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-tooltip.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/bootstrap/js/bootstrap-tab.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-tab.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/bootstrap/js/bootstrap-dropdown.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-dropdown.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/bootstrap/js/bootstrap-scrollspy.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-scrollspy.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/bootstrap/js/bootstrap-popover.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-popover.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/bootstrap/js/bootstrap-button.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-button.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/bootstrap/js/bootstrap-typeahead.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-typeahead.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/bootstrap/js/bootstrap-collapse.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-collapse.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/bootstrap/js/bootstrap-carousel.js" for 127.0.0.1 at 2013-12-27 17:24:04 -0500
+
+ActionController::RoutingError (No route matches [GET] "/bootstrap/js/bootstrap-carousel.js"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (16.8ms)[0m  SELECT "comments".* FROM "comments" 
+  Rendered comments/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 99ms (Views: 81.5ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACAAFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /ACAAFilter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACFFT.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /ACFFT.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACFIRFilter.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /ACFIRFilter.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/ACSpectrum.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /ACSpectrum.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/AudioSequenceEditor.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /AudioSequenceEditor.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SpectrumDisplay.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /SpectrumDisplay.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/SpectrumWorker.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /SpectrumWorker.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audioLayerControl.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /audioLayerControl.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audioplayback.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /audioplayback.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/binarytoolkit.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /binarytoolkit.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/audiosequence.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /audiosequence.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/editorapp.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /editorapp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fft.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /fft.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/filedropbox.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /filedropbox.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/filesystemutility.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /filesystemutility.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/wavetrack.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /wavetrack.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/mathutilities.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /mathutilities.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:24:21 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:25:32 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (24.0ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (0.0ms)
+Compiled application.js  (56ms)  (pid 24242)
+Completed 200 OK in 243ms (Views: 218.6ms | ActiveRecord: 24.0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:25:33 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:25:33 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:25:33 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:25:33 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:25:33 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:25:33 -0500
+Served asset /application.js - 304 Not Modified (20ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:26:41 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (23.9ms)[0m  SELECT "comments".* FROM "comments" 
+  Rendered comments/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 84ms (Views: 59.3ms | ActiveRecord: 23.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:26:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:26:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:26:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:26:42 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:26:42 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:26:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:28:33 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (18.9ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (25.2ms)
+Completed 200 OK in 320ms (Views: 245.9ms | ActiveRecord: 42.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:28:33 -0500
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:28:33 -0500
+Served asset /jquery.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:28:33 -0500
+Served asset /comments.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:28:34 -0500
+Served asset /application.js - 304 Not Modified (31ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:28:34 -0500
+Served asset /comments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:28:34 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 17:29:41 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" 
+  Rendered comments/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 78ms (Views: 77.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 17:29:42 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 17:29:42 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 17:29:42 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 17:29:42 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 17:29:42 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 17:29:42 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 18:24:08 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (86.6ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 235ms (Views: 131.1ms | ActiveRecord: 86.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 18:24:10 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 18:24:10 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 18:24:10 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 18:24:10 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 18:24:10 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 18:24:10 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 18:27:24 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (24.3ms)[0m  SELECT "comments".* FROM "comments" 
+  Rendered comments/index.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 98ms (Views: 72.5ms | ActiveRecord: 24.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:25 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 18:27:25 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 18:27:25 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:25 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:25 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:25 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (18.1ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 70ms (Views: 50.2ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Served asset /comments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Served asset /comments.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 18:27:53 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 18:40:17 -0500
+Processing by CommentsController#index as HTML
+  [1m[35mComment Load (94.7ms)[0m  SELECT "comments".* FROM "comments" 
+  Rendered comments/index.html.erb within layouts/application (0.3ms)
+Completed 500 Internal Server Error in 453ms
+
+ActionView::Template::Error (couldn't find file 'twitter/bootstrap'
+  (in /Users/test/Desktop/huffpo3/app/assets/stylesheets/application.css:12)):
+    2: <html>
+    3: <head>
+    4:   <title>Huffpo3</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: 
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1496992959786143790_70113811698120'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.9ms)
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 18:41:03 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (29.7ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (22.0ms)
+Compiled twitter/bootstrap.css  (3059ms)  (pid 24547)
+Compiled application.css  (3094ms)  (pid 24547)
+Compiled twitter/bootstrap/transition.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/alert.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/button.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/carousel.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/collapse.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/dropdown.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/modal.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/tooltip.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/popover.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/scrollspy.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/tab.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap/affix.js  (0ms)  (pid 24547)
+Compiled twitter/bootstrap.js  (280ms)  (pid 24547)
+Compiled application.js  (311ms)  (pid 24547)
+Completed 200 OK in 3937ms (Views: 3852.9ms | ActiveRecord: 52.2ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap.css - 200 OK (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/transition.js - 200 OK (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/collapse.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/button.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/alert.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/carousel.js - 200 OK (1ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /comments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /application.css - 200 OK (9ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/dropdown.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/tooltip.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/popover.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /twitter/bootstrap/modal.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:08 -0500
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:09 -0500
+Served asset /twitter/bootstrap/tab.js - 200 OK (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:09 -0500
+Served asset /twitter/bootstrap/scrollspy.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:09 -0500
+Served asset /twitter/bootstrap/affix.js - 200 OK (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:09 -0500
+Served asset /twitter/bootstrap.js - 200 OK (11ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:09 -0500
+Served asset /comments.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 18:41:09 -0500
+Served asset /application.js - 200 OK (14ms)
