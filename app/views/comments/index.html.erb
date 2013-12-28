@@ -1,6 +1,6 @@
     <div id="recorder_container">
       <h2>Join The Conversation!</h2>
-      <p>Record monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
+      <p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
       <p>
         <button class="btn btn-primary" onclick="startRecording(this);">Record</button>
         <button id "stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button>
@@ -12,6 +12,21 @@
           <th></th>
           <th></th>
         </tr>
-      
       </table>
-    </div>
+
+
+    <h3> Audio Comments </h3>
+
+    <ul class='comments'>
+    <% @comments.each do |comment| %>
+      <li>
+        <p><%= comment.name %></p>
+        <p>
+          <%= comment.score %>
+        </p>
+      </li>
+    <% end %>
+    </ul>
+
+  </div>
+

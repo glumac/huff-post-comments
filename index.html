@@ -1,27 +1,32 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html> 
+<html> 
 <head>
-  <title>Huffpo3</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-
-
+    
   <link rel="shortcut icon" href="http://www.huffingtonpost.com/favicon.ico">
+
   <title>Our Unplugging Challenge: Seven Days Without Our Devices | Arianna Huffington</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="original_page_files_files/css.php" type="text/css" media="print">
-  <link rel="stylesheet" href="original_page_files_files/css(1).php" type="text/css" media="screen">
-  <link rel="stylesheet" href="original_page_files_files/css(2).php" type="text/css" media="screen">
-  <link rel="stylesheet" href="original_page_files_files/css(3).php" type="text/css" media="screen">
-  <link rel="stylesheet" href="original_page_files_files/css(4).php" type="text/css" media="screen">
+
+  <link rel="stylesheet" href="./original_page_files_files/css.php" type="text/css" media="print">
+  <link rel="stylesheet" href="./original_page_files_files/css(1).php" type="text/css" media="screen">
+  <link rel="stylesheet" href="./original_page_files_files/css(2).php" type="text/css" media="screen">
+  <link rel="stylesheet" href="./original_page_files_files/css(3).php" type="text/css" media="screen">
+  <link rel="stylesheet" href="./original_page_files_files/css(4).php" type="text/css" media="screen">
+
+  <link rel="stylesheet" href="./styles/styles.css" type="text/css" media="screen">
+
+ 
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
 
 </head>
+        
 <body>
 
-
-<div id="logo" data-beacon="{&quot;p&quot;:{&quot;mnid&quot;:&quot;logo&quot;,&quot;mlid&quot;:&quot;masthead&quot;}}" class="data center georgia_12 margin_top_7 color_666666">December 22, 2013    
-    <h1 class="margin_top_7"><a href="http://www.huffingtonpost.com/news/third-metric"><img src="original_page_files_files/image_1368631358.jpeg" alt="healthy-living"></a></h1>
+  <div id="logo" data-beacon="{&quot;p&quot;:{&quot;mnid&quot;:&quot;logo&quot;,&quot;mlid&quot;:&quot;masthead&quot;}}" class="data center georgia_12 margin_top_7 color_666666">December 22, 2013    
+    <h1 class="margin_top_7"><a href="http://www.huffingtonpost.com/news/third-metric"><img src="./original_page_files_files/image_1368631358.jpeg" alt="healthy-living"></a></h1>
   </div>
 
 
@@ -30,20 +35,30 @@
       <div class="blog_author_name clearfix">
         <div class="blog_author_date" style="width:auto;">
           <div class="float_left">
-            <a href="http://www.huffingtonpost.com/arianna-huffington"><img src="./original_page_files_files/headshot.jpg" width="45" height="45" alt="Arianna Huffington"></a>
+            <a href="http://www.huffingtonpost.com/arianna-huffington"><img src="./original_page_files_files/headshot.jpg" width="45" height="45" alt="Arianna Huffington"></a><br>
           </div>
           <div class="float_left fixed_width_author" style="width:195px;">
-            <h4 class ="arianna"><a href="http://www.huffingtonpost.com/arianna-huffington" rel="author">Arianna Huffington</a></h4>
+            <h4><a href="http://www.huffingtonpost.com/arianna-huffington" rel="author">Arianna Huffington</a></h4>
+              <div class="clear_first"></div>
+            <p class="teaser_permalink"></p>  
+            <div class="clear_first"></div>
           </div>
+        </div>
+        <div class="float_right margin_top_10">
+         
+ 
+         
+                   <div class="clear_first"></div>
         </div>
       </div>
     </div>
 
     <!-- Title and meta -->
     <div id="blog_title">
-      <h2 class="title-blog">Our Unplugging Challenge: Seven Days Without Our Devices</h2>
-      <div id="posted" class="comments_datetime_new border_none relative v05" data-beacon="{&quot;p&quot;:{&quot;mnid&quot;:&quot;entryByline&quot;}}">
-        <span class="arial_11 color_696969">Posted: 12/17/2013  9:31 am</span><br>
+      <h1 class="title-blog">Our Unplugging Challenge: Seven Days Without Our Devices</h1>
+      <div class="comments_datetime_new border_none relative v05" data-beacon="{&quot;p&quot;:{&quot;mnid&quot;:&quot;entryByline&quot;}}">
+        <span class="arial_11 color_696969">Posted: 12/17/2013  9:31 am</span>
+        <a href="http://www.huffingtonpost.com/arianna-huffington/unplugging-challenge_b_4455733.html?view=print&comm_ref=false" rel="nofollow" class="absolute print-link" data-beacon="{&quot;p&quot;:{&quot;lnid&quot;:&quot;print&quot;}}"></a>
       </div>
     </div>
 
@@ -80,29 +95,84 @@
     </div>
   </div>
 
-    
+
+
+<div class="recorder container">
+      <h2>Record</h2>
+      <p>Record monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
+      <p>
+        <button class="btn btn-primary" onclick="startRecording(this);">Record</button>
+        <button class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button>
+      </p>
+      
+      <table id="recordingslist">
+        <tr>
+          <th>Sound</th>
+      </table>
+    </div>
+
+
+
+
+  <div class="commentBox" ng-controller="commentCtrl">
+      <h1>Join the Conversation!</h1>
+      <div class="commentList"> 
+          <div class="comment" ng-repeat="comment in comments">
+              <h2 class="commentAuthor">
+                  <!-- <span ng-bind="comment.author"></span> -->
+                  {{comment.author}}
+              </h2>
+              <span ng-bind-html-unsafe="comment.text | markdown"></span>
+          </div>
+      </div>
+      <form name="commentForm" class="commentForm" ng-submit="post()">
+          <input type="text" ng-model="author" placeholder="Your name" required />   
+          <input type="text" ng-model="text" placeholder="Say something..." required />
+          <input type="submit" value="Add" />  
+      </form>
+  </div>    
+
+
+<div ng-app>
+  <h2>Todo</h2>
+  <div ng-controller="TodoCtrl">
+    <span>{{remaining()}} of {{todos.length}} remaining</span>
+    [ <a href="" ng-click="archive()">archive</a> ]
+    <ul class="unstyled">
+      <li ng-repeat="todo in todos">
+        <input type="checkbox" ng-model="todo.done">
+        <span class="done-{{todo.done}}">{{todo.text}}</span>
+      </li>
+    </ul>
+    <form ng-submit="addTodo()">
+      <input type="text" ng-model="todoText"  size="30"
+             placeholder="add new todo here">
+      <input class="btn-primary" type="submit" value="add">
+    </form>
   </div>
+</div>
 
 
-<%= yield %>
 
-
-<!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-
-    <script src="js/lib/recorder.js"></script>
-    <script src="js/recordLive.js"></script>
-    <script src="js/sequencer.js"></script>
-    <script src="js/drone.js"></script>
-
-    <script type="text/javascript">
-      $(window).load(function()
-      {
-        $('.editor.container').addClass('invisible');
-        onDocumentLoaded();
-      });
-    </script>
 
 </body>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+  <!-- Angular -->
+  <script src="./scripts/angular.min.js"></script> 
+
+  <!-- My Scripts -->
+  <script src="./scripts/scripts.js"></script> 
+
+
+
+
+
+
+
 </html>
