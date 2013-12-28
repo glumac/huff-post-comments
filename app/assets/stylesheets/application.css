@@ -19,7 +19,6 @@ body {
 	text-align:center;
 	}
 	
-
 .margin_top_10 {
 	margin-left: 120px;
 	margin-top: -50px;
@@ -28,11 +27,13 @@ body {
 #blog_content {
 	width:700px;
 	margin:0px auto;
+  margin-bottom: 20px;
 	/*text-align:left;*/
 	padding:15px;
 	border:1px dashed #333;
 	background-color:#eee;
 	}
+
 
 #entry_body {
 	text-align:left;
@@ -46,4 +47,51 @@ body {
 .done-true {
   text-decoration: line-through;
   color: grey;
+}
+
+.float_left {
+  width: 45px;
+	margin-left: 0px; 
+  margin-bottom: 0px;
+}
+
+.arianna {
+  margin-left: -40px;
+  }
+
+#recorder_container{
+  width:700px;
+  margin:0px auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /*text-align:left;*/
+  padding:15px;
+  border:1px dashed #333;
+}
+
+#posted{
+  margin-bottom: 30px;
+}
+
+#recordingslist {
+	margin:0px auto;
+	padding:15px;
+	background-color:#eee;
+	}
+
+.soundBite input {
+  margin-right: 4px;
+ }
+
+.btn-warning {
+   background-color: #b76bab;
+}
+
+.btn-warning:disabled {
+ background-color: #b76bab; 
+}
+
+
+#stop {
+ color: 
 }

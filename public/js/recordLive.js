@@ -48,6 +48,23 @@ function createDownloadLink() {
   recorder && recorder.exportWAV(handleWAV.bind(this));
 }
 
+function sendWaveToPost1(blob) {
+  var data = new FormData();
+
+  data.append("audio", blob, (new Date()).getTime() + ".wav");
+
+  var oReq = new XMLHttpRequest();
+  oReq.open("POST", "/save_file");
+  oReq.send(data);
+  oReq.onload = function(oEvent) {
+  if (oReq.status == 200) {
+    console.log("Uploaded");
+  } else {
+    console.log("Error " + oReq.status + " occurred uploading your file.");
+    } 
+  };
+}
+
 function handleWAV(blob) {
   var tableRef = document.getElementById('recordingslist');
   if (currentEditedSoundIndex !== -1) {
@@ -60,6 +77,9 @@ function handleWAV(blob) {
   var audioElement = document.createElement('audio');
   var downloadAnchor = document.createElement('a');
   var editButton = document.createElement('button');
+  var uploadAnchor = document.createElement('a');
+  var uploadButton = document.createElement('button');
+
   
   audioElement.controls = true;
   audioElement.src = url;
@@ -68,42 +88,23 @@ function handleWAV(blob) {
   downloadAnchor.download = new Date().toISOString() + '.wav';
   downloadAnchor.innerHTML = 'Download';
   downloadAnchor.className = 'btn btn-primary';
+  uploadAnchor.upload = new Date().toISOString() + '.wav';
+  uploadAnchor.innerHTML = 'Upload';
+  uploadAnchor.className = 'btn btn-primary upload';
 
-  editButton.onclick = function(e) {
-    $('.recorder.container').addClass('hide');
-    $('.editor.container').removeClass('invisible');
-
-    currentEditedSoundIndex = $(e.target).closest('tr').index();
-    
-    var f = new FileReader();
-    f.onload = function(e) {
-        audio_context.decodeAudioData(e.target.result, function(buffer) {
-          console.warn(buffer);
-          $('#audioLayerControl')[0].handleAudio(buffer);
-        }, function(e) {
-          console.warn(e);
-        });
-    };
-    f.readAsArrayBuffer(blob);
-  };
-  editButton.innerHTML = 'Edit';
-  editButton.className = 'btn btn-primary';
+  // edit
 
   var newCell = newRow.insertCell(-1);
   newCell.appendChild(audioElement);
   newCell = newRow.insertCell(-1);
-  newCell.appendChild(downloadAnchor);
-  newCell = newRow.insertCell(-1);
-  newCell.appendChild(editButton);
+  newCell.appendChild(uploadAnchor);
 
-  newCell = newRow.insertCell(-1);
-  var toggler;
-  for (var i = 0, l = 8; i < l; i++) {
-    toggler = document.createElement('input');
-    $(toggler).attr('type', 'checkbox');
-    newCell.appendChild(toggler);
-  }
+
+ $( ".upload" ).click(function() {
+    sendWaveToPost1(blob);
+  });
 }
+
 
 window.onload = function init() {
   try {
@@ -122,4 +123,5 @@ window.onload = function init() {
   navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     console.warn('No live audio input: ' + e);
   });
-};
+
+  };

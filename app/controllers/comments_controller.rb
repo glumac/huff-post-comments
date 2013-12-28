@@ -15,12 +15,12 @@ class CommentsController < ApplicationController
 	def save_file
 	    audio = params[:audio]
 	    save_path = Rails.root.join("public/#{audio.original_filename}")
-
+	    audio.rewind
 	      # Open and write the file to file system.
 	      File.open(save_path, 'wb') do |f|
-	        f.write params[:audio].read
+	        f.write audio.read
 	      end
-	      
+	    
 	    render :text=> 'hi'
 	end
 
@@ -32,3 +32,6 @@ class CommentsController < ApplicationController
 	end
 
 end
+
+
+ 

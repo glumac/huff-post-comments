@@ -28,6 +28,9 @@ gem 'carrierwave'
 #prettification
 gem 'bootstrap-sass-rails'
 
+#angular to handle DOM manipulation of comments
+gem "angularjs-rails", "~> 1.2.5"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
