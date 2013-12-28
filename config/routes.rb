@@ -1,6 +1,8 @@
 Huffpo3::Application.routes.draw do
   root :to => "comments#index"
 
+  post '/save_file', to: "comments#save_file"
+
   resources :comments
 
 end

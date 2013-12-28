@@ -9406,3 +9406,306 @@ Served asset /application.js - 304 Not Modified (0ms)
 
 Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 23:10:52 -0500
 Served asset /comments.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-27 23:16:57 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (27.3ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (38.5ms)
+Compiled application.css  (2ms)  (pid 28765)
+Completed 200 OK in 1163ms (Views: 988.8ms | ActiveRecord: 98.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /application.css - 200 OK (34ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /comments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-27 23:16:59 -0500
+Served asset /application.js - 304 Not Modified (44ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-27 23:17:00 -0500
+Served asset /twitter/bootstrap.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-27 23:17:00 -0500
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-27 23:17:00 -0500
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (2ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-28 01:00:02 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (41.5ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 737ms (Views: 618.4ms | ActiveRecord: 62.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /application.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /comments.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (114ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:05 -0500
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:06 -0500
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:06 -0500
+Served asset /twitter/bootstrap.js - 304 Not Modified (96ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:06 -0500
+Served asset /comments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:06 -0500
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:06 -0500
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-28 01:00:06 -0500
+Served asset /application.js - 304 Not Modified (29ms)
+
+
+Started POST "/save_file" for 127.0.0.1 at 2013-12-28 01:00:55 -0500
+
+ActionController::RoutingError (No route matches [POST] "/save_file"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.5) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.5) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.5) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/test/.rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /Users/test/.rvm/gems/ruby-1.9.3-p448/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-28 01:02:27 -0500
+Processing by CommentsController#index as HTML
+  [1m[36mComment Load (30.3ms)[0m  [1mSELECT "comments".* FROM "comments" [0m
+  Rendered comments/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 608ms (Views: 501.2ms | ActiveRecord: 44.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /application.css - 304 Not Modified (34ms)
+
+
+Started GET "/assets/comments.css?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /comments.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /jquery.js - 304 Not Modified (27ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:28 -0500
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:29 -0500
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:29 -0500
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:29 -0500
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:29 -0500
+Served asset /twitter/bootstrap.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/comments.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:29 -0500
+Served asset /comments.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-28 01:02:29 -0500
+Served asset /application.js - 304 Not Modified (50ms)
+
+
+Started POST "/save_file" for 127.0.0.1 at 2013-12-28 01:02:45 -0500
+Processing by CommentsController#save_file as */*
+  Parameters: {"audio"=>#<ActionDispatch::Http::UploadedFile:0x007ff3cba73d68 @original_filename="1388210565491.wav", @content_type="audio/wav", @headers="Content-Disposition: form-data; name=\"audio\"; filename=\"1388210565491.wav\"\r\nContent-Type: audio/wav\r\n", @tempfile=#<File:/var/folders/bd/nlzvyrn17bjcv10zq2695bjw0000gn/T/RackMultipart20131228-29387-q50126>>}
+WARNING: Can't verify CSRF token authenticity
+  Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.0ms)
