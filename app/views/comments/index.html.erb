@@ -19,14 +19,15 @@
 
     <ul class='comments'>
     <% @comments.each do |comment| %>
-      <li>
+        <li class="soundBite">
         <p><%= comment.name %></p>
-        <p>
-          <%= comment.score %>
-        </p>
-      </li>
+        <p><audio controls="" src="/audio/<%= comment.clip %>.wav"></audio></p>
+        </li>
     <% end %>
     </ul>
 
   </div>
 
+<!-- http://localhost:3000/assets/movie.mp4
+
+<tr class="soundBite"><td><audio controls="" src="blob:http%3A//localhost%3A3000/e6f52b96-46cb-4f05-91bf-87b51efef53a"></audio></td><td><a class="btn btn-primary upload">Upload</a></td></tr> -->
