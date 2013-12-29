@@ -6,5 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Comment.create(name:"Bobby", clip:"1388258572809", score:5)
-Comment.create(name:"Betty", clip:"1388261945569", score:6)
+Comment.delete_all
+
+Comment.create(name:"Bobby", clip:"1388293717497.wav", score:5)
+Comment.create(name:"Betty", clip:"1388294141487.wav", score:6)
