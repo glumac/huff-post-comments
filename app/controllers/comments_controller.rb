@@ -1,32 +1,36 @@
 class CommentsController < ApplicationController
 
+  attr_accessor :fieldname
+  
+  def comment
+    @commment
+  end
+
   def index
 		@comments = Comment.all
-		@comment = Comment.new(params[:comment])
+    @comment = Comment.new
 	end
 
 	def new
   end
 
-	def create
-		# @comment = Comment.create(params[:comment])
-  #   redirect_to action: "index"
-	end
+  def create
+  end
 
 	def save_file
-      # comment = Comment.create(params[:comment])
-	    audio = params[:audio]
-	    save_path = Rails.root.join("public/audio/#{audio.original_filename}")
-	    audio.rewind
-	      # Open and write the file to file system.
-	      File.open(save_path, 'wb') do |f|
-	        f.write audio.read
-	      end
-      render :text=> 'hi'
-      comment = Comment.new(params[:comment])
-      comment.name = "ITWORKED"
-      comment.clip = "#{audio.original_filename}"
-      comment.save!
+    audio = params[:audio]
+    save_path = Rails.root.join("public/audio/#{audio.original_filename}")
+    audio.rewind
+      # Open and write the file to file system.
+      File.open(save_path, 'wb') do |f|
+        f.write audio.read
+      end
+    render :text=> 'hi'
+    c = Comment.new(params[:comment])
+    c.name = :fieldname
+    c.clip = "#{audio.original_filename}"
+    c.score = 0
+    c.save!
 	end
 
 	# def destroy

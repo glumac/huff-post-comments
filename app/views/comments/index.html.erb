@@ -1,33 +1,35 @@
-    <div id="recorder_container">
-      <h2>Join The Conversation!</h2>
-      <%= render 'form' %>
-      <p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
-      <p>
-        <button class="btn btn-primary" onclick="startRecording(this);">Record</button>
-        <button id "stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button>
-      </p>
-      
-      <table id="recordingslist">
-        <tr>
-          <th></th>
-          <th></th>
-          <th></th>
-        </tr>
-      </table>
+<div id="recorder_container">
+  <h2>Join The Conversation!</h2>
+  <%= form_for @comment do |f| %>
+  <p>
+    <%= f.label :fieldname %>
+    <%= f.text_field :fieldname %>
+  </p>
+<% end %>
 
+  <p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
+  <p> <button class="btn btn-primary" onclick="startRecording(this);">Record</button>
+      <button id "stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button></p>
+  <table id="recordingslist">
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </table>
 
-    <h3> Audio Comments </h3>
+  <h3> Audio Comments </h3>
 
-    <ul class='comments'>
-    <% @comments.each do |comment| %>
-        <li class="soundBite">
-        <p><%= comment.name %></p>
-        <p><audio controls="" src="/audio/<%= comment.clip %>"</audio></p>
-        </li>
-    <% end %>
-    </ul>
+  <ul class='comments'>
+  <% @comments.each do |comment| %>
+    <li class="soundBite">
+    <p><%= comment.name %></p>
+    <p><audio controls="" src="/audio/<%= comment.clip %>"</audio></p>
+    </li>
+  <% end %>
+  </ul>
 
-  </div>
+</div>
 
 <!-- http://localhost:3000/assets/movie.mp4
 

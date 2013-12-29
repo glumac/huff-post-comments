@@ -2,9 +2,7 @@ Huffpo3::Application.routes.draw do
   root :to => "comments#index"
 
   post '/save_file', to: "comments#save_file"
-
   post '/create', to: "comments#create"
-  # post match '/create', 'comments#create', :via => :post
 
   resources :comments
 
