@@ -42734,3 +42734,23 @@ WARNING: Can't verify CSRF token authenticity
   [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "comments" ("clip", "created_at", "name", "score", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["clip", "1388301572725.wav"], ["created_at", Sun, 29 Dec 2013 07:19:32 UTC +00:00], ["name", :fieldname], ["score", 0], ["updated_at", Sun, 29 Dec 2013 07:19:32 UTC +00:00]]
   [1m[35m (1.5ms)[0m  commit transaction
 Completed 200 OK in 99ms (Views: 0.5ms | ActiveRecord: 79.0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (195.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (82.4ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateComments (20131227215009)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (246.2ms)[0m  [1mCREATE TABLE "comments" ("id" serial primary key, "name" character varying(255), "score" integer, "clip" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (67.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20131227215009')
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (260.5ms)[0m  [1mINSERT INTO "comments" ("clip", "created_at", "name", "score", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["clip", "1388258572809"], ["created_at", Sun, 29 Dec 2013 17:22:21 UTC +00:00], ["name", "Bobby"], ["score", 5], ["updated_at", Sun, 29 Dec 2013 17:22:21 UTC +00:00]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "comments" ("clip", "created_at", "name", "score", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["clip", "1388261945569"], ["created_at", Sun, 29 Dec 2013 17:22:22 UTC +00:00], ["name", "Betty"], ["score", 6], ["updated_at", Sun, 29 Dec 2013 17:22:22 UTC +00:00]]
+  [1m[36m (24.2ms)[0m  [1mCOMMIT[0m
+Connecting to database specified by database.yml
