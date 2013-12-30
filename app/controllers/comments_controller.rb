@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
   def index
 		@comments = Comment.all
     @comment = Comment.new
-    @@mine = @comment
 	end
 
 	def new
@@ -30,7 +29,6 @@ class CommentsController < ApplicationController
     c.clip = "#{audio.original_filename}"
     c.score = 0
     c.save!
-    respond_with @comment, :location => comments_url
 	end
 
 	# def destroy

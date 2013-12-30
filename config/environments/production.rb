@@ -20,6 +20,9 @@ Huffpo3::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # For Heroku
+  config.action_dispatch.x_sendfile_header = nil 
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 
