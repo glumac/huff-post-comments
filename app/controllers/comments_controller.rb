@@ -8,11 +8,11 @@ class CommentsController < ApplicationController
 	end
 
 	def new
-    respond_with @comment, :location => comments_url
+    # respond_with @comment, :location => comments_url
   end
 
   def create
-    respond_with @comment, :location => comments_url
+    # respond_with @comment, :location => comments_url
   end
 
 	def save_file
