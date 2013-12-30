@@ -28,11 +28,23 @@ function halt() {
     $('#stop').trigger('click');
 }
 
+var num = 6
+
 function startRecording(button) {
+  var countdown = setInterval(function() {
+    num --;
+    $('#start').html(num);
+    if (num < 1){
+        $('#start').html("Re-Record");
+        clearInterval(countdown);
+        num = 6
+    }
+  }, 1000);
   recorder && recorder.record();
   button.disabled = true;
   button.nextElementSibling.disabled = false;
   console.log('Recording...');
+  countdown;
   setTimeout(halt, 6000);
 }
 
@@ -104,9 +116,12 @@ function handleWAV(blob) {
   newCell = newRow.insertCell(-1);
   newCell.appendChild(uploadAnchor);
 
+  var oldRow = document.getElementById('recordingslist').deleteRow(0);
 
  $( ".upload" ).click(function() {
     sendWaveToPost1(blob);
+    var oldRow = document.getElementById('recordingslist').deleteRow(0);
+    var thanks = $('#thanks').html("Thanks for contributing!");
   });
 }
 
