@@ -1,6 +1,8 @@
 <div id="recorder_container">
   <h2>Join The Conversation!</h2> 
-
+  <div id = "instructions">
+  <p>Speak your piece - but succinctly!  New voices are limited to 6 second audio comments. You’ll earn the ability to leave longer messages when others “plus” your contributions.</p>
+  </div>
   <h5 id ="user_placehold">Commenting as <span>Brandon</span></h5> 
  
   <div id = "thanks">
@@ -17,14 +19,12 @@
 
   <h3> Audio Comments </h3>
 
-  <table class='comments'>
+  <div class='comments'>
+   <ul class="soundBite">
   <% @comments.each do |comment| %>
-    <tr class="soundBite">
-    <td><%= comment.name %></td>
-    <td><audio controls="" src="/audio/<%= comment.clip %>"</audio></td>
-    </tr>
+    <li><div id = "name"><%= comment.name %></div><div id = "audio"><audio controls="" src="/audio/<%= comment.clip %>"</audio></audio></div></li>
   <% end %>
-  </table>
+  </ul>
 
 </div>
 

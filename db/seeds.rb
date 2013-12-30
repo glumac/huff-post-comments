@@ -8,5 +8,5 @@
 
 Comment.delete_all
 
-Comment.create(name:"Bobby", clip:"1388293717497.wav", score:5)
-Comment.create(name:"Betty", clip:"1388294141487.wav", score:6)
+Comment.create(name:"Bobby", clip:"bob.wav", score:5)
+Comment.create(name:"Betty", clip:"betty.wav", score:6)

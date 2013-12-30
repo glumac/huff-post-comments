@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+  respond_to :html, :js
+
   def index
 		@comments = Comment.all
     @comment = Comment.new
@@ -7,13 +9,11 @@ class CommentsController < ApplicationController
 	end
 
 	def new
+    respond_with @comment, :location => comments_url
   end
 
   def create
-      respond_to do |format|
-      format.html { redirect_to comments_url }
-      format.js
-    end
+    respond_with @comment, :location => comments_url
   end
 
 	def save_file
@@ -30,6 +30,7 @@ class CommentsController < ApplicationController
     c.clip = "#{audio.original_filename}"
     c.score = 0
     c.save!
+    respond_with @comment, :location => comments_url
 	end
 
 	# def destroy

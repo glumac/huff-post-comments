@@ -44,7 +44,7 @@ body {
 	height: 400px;
 }
 
-.comments {
+#comments {
 	margin:0px auto;
 }
 
@@ -77,6 +77,11 @@ body {
   margin-bottom: 30px;
 }
 
+#instructions {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
 #recordingslist {
 	margin:0px auto;
 	padding:15px;
@@ -89,4 +94,23 @@ body {
 
 #user_placehold span {
   color: #428bca
+}
+
+
+ul
+{
+  list-style-type: none;
+  margin-left: -20px;
+}
+
+#name {
+  height: 30px;
+  width: 80px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+#audio {
+  display: inline-block;
 }

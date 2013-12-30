@@ -122,6 +122,7 @@ function handleWAV(blob) {
     sendWaveToPost1(blob);
     var oldRow = document.getElementById('recordingslist').deleteRow(0);
     var thanks = $('#thanks').html("Thanks for contributing!");
+    var comments = $('#comments');
   });
 }
 
