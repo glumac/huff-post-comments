@@ -2,7 +2,7 @@ class Comment < ActiveRecord::Base
 
   attr_accessible :clip, :name, :score
 
-  attr_accessor :fieldname
+  # attr_accessor :name
 
   mount_uploader :Clip, ClipUploader
 

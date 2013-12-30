@@ -1,20 +1,19 @@
 class CommentsController < ApplicationController
 
-  attr_accessor :fieldname
-  
-  def comment
-    @commment
-  end
-
   def index
 		@comments = Comment.all
     @comment = Comment.new
+    @@mine = @comment
 	end
 
 	def new
   end
 
   def create
+      respond_to do |format|
+      format.html { redirect_to comments_url }
+      format.js
+    end
   end
 
 	def save_file
@@ -26,8 +25,8 @@ class CommentsController < ApplicationController
         f.write audio.read
       end
     render :text=> 'hi'
-    c = Comment.new(params[:comment])
-    c.name = :fieldname
+    c = Comment.new
+    c.name = "Brandon"
     c.clip = "#{audio.original_filename}"
     c.score = 0
     c.save!

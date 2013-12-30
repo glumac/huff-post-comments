@@ -44,6 +44,10 @@ body {
 	height: 400px;
 }
 
+.comments {
+	margin:0px auto;
+}
+
 .done-true {
   text-decoration: line-through;
   color: grey;
@@ -51,7 +55,7 @@ body {
 
 .float_left {
   width: 45px;
-	margin-left: 0px; 
+  margin-left: 0px; 
   margin-bottom: 0px;
 }
 
@@ -83,15 +87,6 @@ body {
   margin-right: 4px;
  }
 
-.btn-warning {
-   background-color: #b76bab;
-}
-
-.btn-warning:disabled {
- background-color: #b76bab; 
-}
-
-
-#stop {
- color: blue;
+#user_placehold span {
+  color: #428bca
 }

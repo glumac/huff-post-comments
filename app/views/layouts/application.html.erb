@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Huffpo3</title>
+  <title>Huffpost Audio Comments</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
-
   <link rel="shortcut icon" href="http://www.huffingtonpost.com/favicon.ico">
   <title>Our Unplugging Challenge: Seven Days Without Our Devices | Arianna Huffington</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="original_page_files_files/css.php" type="text/css" media="print">
-  <link rel="stylesheet" href="original_page_files_files/css(1).php" type="text/css" media="screen">
-  <link rel="stylesheet" href="original_page_files_files/css(2).php" type="text/css" media="screen">
-  <link rel="stylesheet" href="original_page_files_files/css(3).php" type="text/css" media="screen">
-  <link rel="stylesheet" href="original_page_files_files/css(4).php" type="text/css" media="screen">
-
 </head>
 <body>
 
@@ -80,22 +72,17 @@
     </div>
   </div>
 
-    
-  </div>
-
+</div>
 
 <%= yield %>
 
 
-<!-- Le javascript
+<!-- Javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
     <script src="js/lib/recorder.js"></script>
     <script src="js/recordLive.js"></script>
-    <script src="js/sequencer.js"></script>
-    <script src="js/drone.js"></script>
-
     <script type="text/javascript">
       $(window).load(function()
       {

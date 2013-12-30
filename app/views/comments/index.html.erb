@@ -1,15 +1,12 @@
 <div id="recorder_container">
-  <h2>Join The Conversation!</h2>
-  <%= form_for @comment do |f| %>
-  <p>
-    <%= f.label :fieldname %>
-    <%= f.text_field :fieldname %>
-  </p>
-<% end %>
+  <h2>Join The Conversation!</h2> 
+
+  <h5 id ="user_placehold">Commenting as <span>Brandon</span></h5> 
+
 
   <p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
-  <p> <button class="btn btn-primary" onclick="startRecording(this);">Record</button>
-      <button id "stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button></p>
+  <p> <button id="start" class="btn btn-primary" onclick="startRecording(this);">Record</button>
+      <button id="stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button></p>
   <table id="recordingslist">
     <tr>
       <th></th>
@@ -20,17 +17,14 @@
 
   <h3> Audio Comments </h3>
 
-  <ul class='comments'>
+  <table class='comments'>
   <% @comments.each do |comment| %>
-    <li class="soundBite">
-    <p><%= comment.name %></p>
-    <p><audio controls="" src="/audio/<%= comment.clip %>"</audio></p>
-    </li>
+    <tr class="soundBite">
+    <td><%= comment.name %></td>
+    <td><audio controls="" src="/audio/<%= comment.clip %>"</audio></td>
+    </tr>
   <% end %>
-  </ul>
+  </table>
 
 </div>
 
-<!-- http://localhost:3000/assets/movie.mp4
-
-<tr class="soundBite"><td><audio controls="" src="blob:http%3A//localhost%3A3000/e6f52b96-46cb-4f05-91bf-87b51efef53a"></audio></td><td><a class="btn btn-primary upload">Upload</a></td></tr> -->

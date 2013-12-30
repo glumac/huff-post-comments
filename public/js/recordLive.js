@@ -24,11 +24,16 @@ function changeVolume(value) {
   volume.gain.value = value;
 }
 
+function halt() {
+    $('#stop').trigger('click');
+}
+
 function startRecording(button) {
   recorder && recorder.record();
   button.disabled = true;
   button.nextElementSibling.disabled = false;
   console.log('Recording...');
+  setTimeout(halt, 6000);
 }
 
 function stopRecording(button) {
