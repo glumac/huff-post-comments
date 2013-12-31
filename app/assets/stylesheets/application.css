@@ -30,7 +30,7 @@ body {
   margin-bottom: 20px;
 	/*text-align:left;*/
 	padding:15px;
-	border:1px dashed #333;
+/*	border:1px dashed #333;*/
 	background-color:#eee;
 	}
 
@@ -70,7 +70,7 @@ body {
   margin-top: 20px;
   /*text-align:left;*/
   padding:15px;
-  border:1px dashed #333;
+  background-color:#eee;
 }
 
 #posted{
@@ -88,14 +88,13 @@ body {
 	background-color:#eee;
 	}
 
-.soundBite input {
+#soundBite input {
   margin-right: 4px;
  }
 
 #user_placehold span {
   color: #428bca
 }
-
 
 ul
 {

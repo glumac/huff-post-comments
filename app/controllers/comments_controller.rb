@@ -5,14 +5,17 @@ class CommentsController < ApplicationController
   def index
 		@comments = Comment.all
     @comment = Comment.new
+
+   # respond_to do |format|
+   #  format.html # index.html.erb
+   #  format.json { render json: @comments }
+   # end
 	end
 
 	def new
-    # respond_with @comment, :location => comments_url
   end
 
   def create
-    # respond_with @comment, :location => comments_url
   end
 
 	def save_file
@@ -31,18 +34,8 @@ class CommentsController < ApplicationController
     c.save!
 	end
 
-	# def destroy
-	# 	@comment = Commentfind(params[:id])
-	# 	@comment.destroy
-	# 	flash[:notice] = "Destroyed Comment"
-	# 	redirect_to comments_url
-	# end
+	def destroy
+	end
 
 end
 
-#     u = User.new
-# u.avatar = params[:file]
-# u.avatar = File.open('somewhere')
-# u.save!
-# u.avatar.url # => '/url/to/file.png'
-# u.avatar.current_path # => 'path/to/file.

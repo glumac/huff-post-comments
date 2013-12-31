@@ -118,11 +118,21 @@ function handleWAV(blob) {
 
   var oldRow = document.getElementById('recordingslist').deleteRow(0);
 
+  function addElement () {
+  var newLi = document.createElement("li");
+  var user = document.createTextNode("Brandon   ");
+  newLi.appendChild(user);
+  newLi.appendChild(audioElement);
+  var comments = $('#soundBite')
+  comments[0].appendChild(newLi)    
+  }
+ 
+
  $( ".upload" ).click(function() {
     sendWaveToPost1(blob);
     var oldRow = document.getElementById('recordingslist').deleteRow(0);
     var thanks = $('#thanks').html("Thanks for contributing!");
-    var comments = $('#comments');
+    addElement();
   });
 }
 

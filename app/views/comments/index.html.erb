@@ -19,12 +19,13 @@
 
   <h3> Audio Comments </h3>
 
-  <div class='comments'>
-   <ul class="soundBite">
-  <% @comments.each do |comment| %>
+  <div id='comments'>
+   <ul id="soundBite">
+    <% @comments.each do |comment| %>
     <li><div id = "name"><%= comment.name %></div><div id = "audio"><audio controls="" src="/audio/<%= comment.clip %>"</audio></audio></div></li>
   <% end %>
   </ul>
 
 </div>
+
 
