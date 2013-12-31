@@ -120,8 +120,11 @@ function handleWAV(blob) {
 
   function addElement () {
   var newLi = document.createElement("li");
-  var user = document.createTextNode("Brandon   ");
-  newLi.appendChild(user);
+  var person = document.createElement("div");
+  person.setAttribute("id", "name");
+  var user = document.createTextNode("Brandon");
+  newLi.appendChild(person);
+  person.appendChild(user);
   newLi.appendChild(audioElement);
   var comments = $('#soundBite')
   comments[0].appendChild(newLi)    
