@@ -1,7 +1,7 @@
 <div id="recorder_container">
   <h2>Join The Conversation!</h2> 
   <div id = "instructions">
-  <p>Speak your piece - but succinctly!  New voices are limited to 6 second audio comments. You’ll earn the ability to leave longer messages when others “plus” your contributions.</p>
+  <p>Speak your piece - but succinctly!  New voices are limited to 6 second audio comments. You’ll earn the ability to leave longer messages when others amplify ( <span class="glyphicon glyphicon-bullhorn"></span> ) your contributions.</p>
   </div>
   <h5 id ="user_placehold">Commenting as <span>Brandon</span></h5> 
  
@@ -20,11 +20,12 @@
   <h3> Audio Comments </h3>
 
   <div id='comments'>
-   <ul id="soundBite">
+    <ul id="soundBite">
     <% @comments.each do |comment| %>
-    <li><div id = "name"><%= comment.name %></div><div id = "audio"><audio controls="" src="/audio/<%= comment.clip %>"</audio></audio></div></li>
-  <% end %>
-  </ul>
+    <li><div id = "name"><%= comment.name %></div><div id = "audio"><audio controls="" src="/audio/<%= comment.clip %>"</audio></audio></div><div id ="amplify" class="glyphicon glyphicon-bullhorn"></div><div id ="score"><%= comment.score %></div></li>
+    <% end %>
+    </ul>
+  </div>
 
 </div>
 

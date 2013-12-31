@@ -113,3 +113,17 @@ ul
 #audio {
   display: inline-block;
 }
+
+#amplify {
+  margin-left: 15px;
+  font-size: 25px;
+  opacity: .5;
+}
+
+#score {
+  display: inline;
+  margin-left: 5px;
+  font-size: 30px;
+  opacity: .5;
+}
+
