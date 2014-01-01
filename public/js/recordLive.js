@@ -128,6 +128,15 @@ function handleWAV(blob) {
   newLi.appendChild(audioElement);
   var comments = $('#soundBite')
   comments[0].appendChild(newLi)    
+  var amplify = document.createElement("div");
+  amplify.setAttribute("id", "amplify");
+  amplify.setAttribute("class", "glyphicon glyphicon-bullhorn");
+  newLi.appendChild(amplify);
+  var score = document.createElement("div");
+  var number = document.createTextNode("0");
+  score.appendChild(number);
+  score.setAttribute("id", "score");
+  newLi.appendChild(score);
   }
  
 
