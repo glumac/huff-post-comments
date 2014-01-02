@@ -28,16 +28,19 @@ function halt() {
     $('#stop').trigger('click');
 }
 
-var num = 6
+var num;
 
 function startRecording(button) {
+  num = 6
   var countdown = setInterval(function() {
     num --;
     $('#start').html(num);
     if (num < 1){
-        $('#start').html("Re-Record");
         clearInterval(countdown);
-        num = 6
+        $('#start').html("Record Again");
+        if (button.nextElementSibling.disabled === false){
+        halt();
+      }
     }
   }, 1000);
   recorder && recorder.record();
@@ -45,19 +48,19 @@ function startRecording(button) {
   button.nextElementSibling.disabled = false;
   console.log('Recording...');
   countdown;
-  setTimeout(halt, 6000);
+  // setTimeout(halt, 6000);
 }
 
-function stopRecording(button) {
+function stopRecording(button, num) {
   recorder && recorder.stop();
   button.disabled = true;
   button.previousElementSibling.disabled = false;
   console.log('Stopped recording.');
-  
+  $('#start').html("Re-Record");
   // create WAV download link using audio data blob
   createDownloadLink();
-  
   recorder.clear();
+  num = 0 
 }
 
 function createDownloadLink() {
@@ -117,7 +120,6 @@ function handleWAV(blob) {
 
   var oldRow = document.getElementById('recordingslist').deleteRow(0);
   var formName = $("#comment_name").val();
-  
   function addElement () {
   var newLi = document.createElement("li");
   var person = document.createElement("div");
