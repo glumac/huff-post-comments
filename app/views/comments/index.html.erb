@@ -3,8 +3,10 @@
   <div id = "instructions">
   <p>Speak your piece - but succinctly!  New voices are limited to 6 second audio comments. You’ll earn the ability to leave longer messages when others amplify ( <span class="glyphicon glyphicon-bullhorn"></span> ) your contributions.</p>
   </div>
-  <h5 id ="user_placehold">Commenting as <span>Brandon</span></h5> 
- 
+ <!--  <h5 id ="user_placehold">Commenting as <span>Brandon</span></h5>  -->
+  <div id="name_form">
+    <%= render 'form' %>
+  </div>
   <div id = "thanks">
     <p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
     <p> <button id="start" class="btn btn-primary" onclick="startRecording(this);">Record</button>
@@ -18,7 +20,6 @@
   
 
   <h3> Audio Comments </h3>
-
   <div id='comments'>
     <ul id="soundBite">
     <% @comments.each do |comment| %>

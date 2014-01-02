@@ -67,9 +67,9 @@ function createDownloadLink() {
 
 function sendWaveToPost1(blob) {
   var data = new FormData();
-
+  var formName = $("#comment_name").val();
   data.append("audio", blob, (new Date()).getTime() + ".wav");
-
+  data.append("poster", formName)
   var oReq = new XMLHttpRequest();
   oReq.open("POST", "/save_file");
   oReq.send(data);
@@ -87,7 +87,6 @@ function handleWAV(blob) {
   if (currentEditedSoundIndex !== -1) {
     $('#recordingslist tr:nth-child(' + (currentEditedSoundIndex + 1) + ')').remove();
   }
-
   var url = URL.createObjectURL(blob);
   var newRow   = tableRef.insertRow(currentEditedSoundIndex);
   newRow.className = 'soundBite';
@@ -117,12 +116,13 @@ function handleWAV(blob) {
   newCell.appendChild(uploadAnchor);
 
   var oldRow = document.getElementById('recordingslist').deleteRow(0);
-
+  var formName = $("#comment_name").val();
+  
   function addElement () {
   var newLi = document.createElement("li");
   var person = document.createElement("div");
   person.setAttribute("id", "name");
-  var user = document.createTextNode("Brandon");
+  var user = document.createTextNode(formName);
   newLi.appendChild(person);
   person.appendChild(user);
   newLi.appendChild(audioElement);
@@ -143,6 +143,8 @@ function handleWAV(blob) {
  $( ".upload" ).click(function() {
     sendWaveToPost1(blob);
     var oldRow = document.getElementById('recordingslist').deleteRow(0);
+    var nameForm = document.getElementById('name_form');
+    nameForm.parentNode.removeChild(nameForm);
     var thanks = $('#thanks').html("Thanks for contributing!");
     addElement();
   });

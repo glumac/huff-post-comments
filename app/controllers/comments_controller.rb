@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
 
 	def save_file
     audio = params[:audio]
+    poster = params[:poster]
     save_path = Rails.root.join("public/audio/#{audio.original_filename}")
     audio.rewind
       # Open and write the file to file system.
@@ -28,7 +29,7 @@ class CommentsController < ApplicationController
       end
     render :text=> 'hi'
     c = Comment.new
-    c.name = "Brandon"
+    c.name = poster
     c.clip = "#{audio.original_filename}"
     c.score = 0
     c.save!

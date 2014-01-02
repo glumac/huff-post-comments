@@ -29,6 +29,11 @@ gem 'carrierwave'
 #prettification
 gem 'bootstrap-sass-rails'
 
+
+#form enhance. enhance. enhance. enhance.
+gem "simple_form"
+
+
 #angular to handle DOM manipulation of comments
 gem "angularjs-rails", "~> 1.2.5"
 
