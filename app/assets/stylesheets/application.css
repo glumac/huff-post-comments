@@ -13,11 +13,11 @@
  *= require_tree .
  */
 
-
 body {
-	margin:50px 0px; padding:0px;
-	text-align:center;
-	}
+	margin: 50px 0px; 
+	padding: 0px;
+	text-align: center;
+}
 	
 .margin_top_10 {
 	margin-left: 120px;
@@ -25,109 +25,102 @@ body {
 }
 
 #blog_content {
-	width:700px;
-	margin:0px auto;
-  margin-bottom: 20px;
-	/*text-align:left;*/
-	padding:15px;
-/*	border:1px dashed #333;*/
-	background-color:#eee;
-	}
-
+	width: 700px;
+	margin: 0px auto;
+ 	margin-bottom: 20px;
+	padding: 15px;
+	background-color: #eee;
+}
 
 #entry_body {
-	text-align:left;
+	text-align: left;
 }
 
 .commentBox {
-	border:1px dashed #333;
+	border: 1px dashed #333;
 	height: 400px;
 }
 
 #comments {
-	margin:0px auto;
+	margin: 0px auto;
 }
 
 .done-true {
-  text-decoration: line-through;
-  color: grey;
+	text-decoration: line-through;
+	color: grey;
 }
 
 .float_left {
-  width: 45px;
-  margin-left: 0px; 
-  margin-bottom: 0px;
+	width: 45px;
+	margin-left: 0px; 
+	margin-bottom: 0px;
 }
 
 .arianna {
-  margin-left: -40px;
-  }
+	margin-left: -40px;
+}
 
 #recorder_container{
-  width:700px;
-  margin:0px auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
-  /*text-align:left;*/
-  padding:15px;
-  background-color:#eee;
+	width: 700px;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 15px;
+	background-color: #eee;
 }
 
 #posted{
-  margin-bottom: 30px;
+	margin-bottom: 30px;
 }
 
 #instructions {
-  margin-left: 40px;
-  margin-right: 40px;
+	margin-left: 40px;
+	margin-right: 40px;
 }
 
 #recordingslist {
-	margin:0px auto;
-	padding:15px;
-	background-color:#eee;
-	}
-
-#soundBite input {
-  margin-right: 4px;
- }
-
-#user_placehold span {
-  color: #428bca
+	margin: 0px auto;
+	padding: 15px;
+	background-color: #eee;
 }
 
-ul
-{
-  list-style-type: none;
-  margin-left: -20px;
+#soundBite input {
+	margin-right: 4px;
+}
+
+#user_placehold span {
+	color: #428bca;
+}
+
+ul {
+	list-style-type: none;
+	margin-left: -20px;
 }
 
 #name {
-  height: 30px;
-  width: 80px;
-  display: inline-block;
-  font-size: 16px;
+	height: 30px;
+	width: 80px;
+	display: inline-block;
+	font-size: 16px;
 }
 
-
 #audio {
-  display: inline-block;
+	display: inline-block;
 }
 
 #amplify {
-  margin-left: 15px;
-  font-size: 25px;
-  opacity: .5;
+	margin-left: 15px;
+	font-size: 25px;
+	opacity: .5;
 }
 
 #score {
-  display: inline;
-  margin-left: 5px;
-  font-size: 30px;
-  opacity: .5;
+	display: inline;
+	margin-left: 5px;
+	font-size: 30px;
+	opacity: .5;
 }
 
 .voices { 
-  margin-bottom: -15px
-  }
-
+	margin-bottom: -15px
+}
