@@ -1,34 +1,41 @@
 <div id="recorder_container">
-  
-  <h3 class = "voices">HuffPo Voices<h3>
-  <h5>Join The Conversation!</h5> 
-  
-  <div id = "instructions">
-  <p>Speak your piece - but succinctly!  New voices are limited to a six second audio comment. You’ll earn the ability to leave longer messages when others amplify ( <span class="glyphicon glyphicon-bullhorn"></span> ) your contributions.</p>
-  </div>
-  
-  <div id="name_form">
-    <%= render 'form' %>
-  </div>
-  
-  <div id = "thanks">
-    <p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
-    <p> <button id="start" class="btn btn-primary" onclick="startRecording(this);">Record</button>
-        <button id="stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button></p>
-    <table id="recordingslist">
-    <tr><th></th></tr>
-    </table>
-  </div> 
-  
-  <h3> Audio Comments </h3>
-  <div id='comments'>
-    <ul id="soundBite">
-    <% @comments.each do |comment| %>
-    <li><div id = "name"><%= comment.name %></div><div id = "audio"><audio controls="" src="/audio/<%= comment.clip %>"</audio></audio></div><div id ="amplify" class="glyphicon glyphicon-bullhorn"></div><div id ="score"><%= comment.score %></div></li>
-    <% end %>
-    </ul>
-  </div>
+	<h3 class = "voices">HuffPo Voices<h3>
+	<h5>Join The Conversation!</h5> 
+	<div id = "instructions">
+		<p>Speak your piece - but succinctly!  New voices are limited to a six second audio comment. You’ll earn the ability to leave longer messages when others amplify ( <span class="glyphicon glyphicon-bullhorn"></span> ) your contributions.</p>
+	</div>
+	<div id="name_form">
+		<%= render 'form' %>
+	</div>
+	<div id = "thanks">
+		<p>Monitor volume: <input type="range" max="1" step="0.1" value="0" onchange="changeVolume(this.value)"/></p>
+		<p>
+			<button id="start" class="btn btn-primary" onclick="startRecording(this);">Record</button>
+			<button id="stop" class="btn btn-warning" onclick="stopRecording(this);" disabled>Stop</button>
+		</p>
+	<table id="recordingslist">
+		<tr>
+			<th></th>
+		</tr>
+	</table>
+</div> 
 
+<h3> Audio Comments </h3>
+
+<div id='comments'>
+	<ul id="soundBite">
+	<% @comments.each do |comment| %>
+		<li>
+			<div id = "name"><%= comment.name %></div>
+			<div id = "audio">
+				<audio controls="" src="/audio/<%= comment.clip %>"</audio>
+			</div>
+			<div id ="amplify" class="glyphicon glyphicon-bullhorn"></div>
+			<div id ="score">
+				<%= comment.score %>
+			</div>
+		</li>
+	<% end %>
+	</ul>
 </div>
-
 

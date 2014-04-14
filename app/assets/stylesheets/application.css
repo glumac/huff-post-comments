@@ -14,8 +14,8 @@
  */
 
 body {
-	margin: 50px 0px; 
-	padding: 0px;
+	margin: 50px 0; 
+	padding: 0;
 	text-align: center;
 }
 	
@@ -26,7 +26,7 @@ body {
 
 #blog_content {
 	width: 700px;
-	margin: 0px auto;
+	margin: 0 auto;
  	margin-bottom: 20px;
 	padding: 15px;
 	background-color: #eee;
@@ -42,7 +42,7 @@ body {
 }
 
 #comments {
-	margin: 0px auto;
+	margin: 0 auto;
 }
 
 .done-true {
@@ -52,8 +52,8 @@ body {
 
 .float_left {
 	width: 45px;
-	margin-left: 0px; 
-	margin-bottom: 0px;
+	margin-left: 0; 
+	margin-bottom: 0;
 }
 
 .arianna {
@@ -79,7 +79,7 @@ body {
 }
 
 #recordingslist {
-	margin: 0px auto;
+	margin: 0 auto;
 	padding: 15px;
 	background-color: #eee;
 }
@@ -123,4 +123,9 @@ ul {
 
 .voices { 
 	margin-bottom: -15px
+}
+
+#thanks p {
+	margin-left: 240px;
+	width: 220px;
 }
